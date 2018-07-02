@@ -1,6 +1,13 @@
 # Point to the location of image magick folder (portable version). Example:
-Sys.setenv(PATH = paste("C:/Program Files/ImageMagick-7.0.8-3-portable-Q16-x64",
+
+OSName = Sys.info()['sysname']
+if(a=="Windows") {
+  Sys.setenv(PATH = paste("C:/Program Files/ImageMagick-7.0.8-3-portable-Q16-x64",
                         Sys.getenv("PATH"), sep = ";"))
+}
+else if(a=="Linux") {
+  Sys.setenv(PATH=paste("/ImageMagick-7.0.8-3", Sys.getenv("PATH"), sep=";"))
+}
 
 library(LaF)
 library(dplyr)
