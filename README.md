@@ -18,7 +18,12 @@ install.packages("LaF")
 install.packages("dplyr")
 install.packages("rjson")
 install.packages("ggplot2")
-install.packages("gganimate")
+
+```
+Apart from these packages, you'll need to install <code>gganimate</code> as well. To install it run the following commands:
+```
+install.packages("devtools")
+devtools::install_github("dgrtwo/gganimate")
 ```
 
 ## Instructions
